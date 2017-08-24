@@ -4340,7 +4340,7 @@ body.dark-version,
 .lab-modal-body {
         position:fixed;
         bottom:0px;
-        right:50px;
+        left:0px;
         margin:0px;
         -webkit-transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
         -moz-transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
