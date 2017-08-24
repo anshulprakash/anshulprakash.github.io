@@ -4338,7 +4338,7 @@ body.dark-version,
 /* ----------------------------------------------------------------------- */
 
 .lab-modal-body {
-        position:fixed;
+        position:inherit;
         bottom:0px;
         right:50px;
         margin:0px;
