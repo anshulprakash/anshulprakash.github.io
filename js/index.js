@@ -60,7 +60,7 @@ jQuery(document).ready(function () {
     Personal Title
     ========================================================================== */
     jQuery('#personal-typed').typed({
-        strings: ['Oh Hello!!', 'I am a Web Developer &  an Aspiring Data Scientist.', 'Currently I am a Graduate Student at Texas A&M University', 'I am a Polyglot Programmer', 'who is in love with Technology.'],
+        strings: ['Oh Hello!!', 'I am a Web Developer &  an Aspiring Data Scientist.', 'Currently I am a Graduate Student at Texas A&M University.', 'As a Polyglot Programmer, I want to hack growth using data.','Scroll down to know more about me.'],
         loop: true,
         typeSpeed: 30,
         backDelay: 2000,
@@ -86,26 +86,6 @@ jQuery(document).ready(function () {
         });
     }, { offset: '50%', triggerOnce: true });
 
-
-    /* ==========================================================================
-    MailChimp
-    ========================================================================== */
-    function mailchimpCallback(response) {
-        jQuery('form#newsletter-form .nesto-response').show();
-        if (response.result === 'success') {
-            jQuery('form#newsletter-form input').val('');
-            jQuery('.nesto-response').html('Please check your e-mail to complete the subscription');
-        } else if (response.result === 'error') {
-            jQuery('.nesto-response').html('Please enter unsubscribed / valid e-mail address');
-        }
-    }
-    jQuery('form#newsletter-form input').focus(function () {
-        jQuery('form#newsletter-form .nesto-response').hide();
-    });
-    jQuery('#newsletter-form').ajaxChimp({
-        callback: mailchimpCallback,
-        url: 'http://nestolab.us8.list-manage1.com/subscribe/post?u=1bb0930eeb3f8c90f187eb8ac&id=52e0f44deb'
-    });
 
 
     /* ==========================================================================
@@ -147,7 +127,7 @@ jQuery(document).ready(function () {
         autoPlay: false,
         pagination: true,
         stopOnHover: true,
-        navigation: false,
+        navigation: true,
         itemsDesktop: [1199, 4],
         itemsDesktopSmall: [992, 3],
         itemsTablet: [768, 2],
@@ -168,7 +148,7 @@ jQuery(document).ready(function () {
     Testimonials Slider
     ========================================================================== */
     jQuery('.owl-testimonials').owlCarousel({
-        autoPlay: false,
+        autoPlay: true,
         singleItem: true,
         pagination: true,
         stopOnHover: true,
@@ -196,7 +176,7 @@ jQuery(document).ready(function () {
         autoPlay: false,
         pagination: true,
         stopOnHover: true,
-        navigation: false,
+        navigation: true,
         itemsDesktop: [1199, 3],
         itemsDesktopSmall: [992, 2],
         itemsTablet: [768, 2],
@@ -456,39 +436,6 @@ jQuery(window).load(function () {
         return false;
     });
 
-
-    /* ==========================================================================
-    Dribbble Feed
-    ========================================================================== */
-    jQuery.jribbble.getShotsByPlayerId('NestoLab', function (playerShots) {
-        var html = [];
-        jQuery.each(playerShots.shots, function (i, shot) {
-            html.push('<li><a href="' + shot.url + '" title="' + shot.title + '" target="_blank"><img src="' + shot.image_url + '" alt="' + shot.title + '"></a></li>');
-        });
-        jQuery('.widget-dribbble ul').html(html.join(''));
-    }, {page: 1, per_page: 1});
-
-
-    /* ==========================================================================
-    Twitter Feed
-    ========================================================================== */
-    jQuery('.tweetfeed .tweet').twittie({
-        template: '<a href="http://twitter.com/NestoLab" title="NestoLab" target="_blank"><i class="fa fa-twitter"></i></a> {{tweet}}',
-        count: 1,
-        hideReplies: true
-    });
-
-
-    /* ==========================================================================
-    Flickr Feed
-    ========================================================================== */
-    jQuery('#flickr-feed').jflickrfeed({
-        limit: 9,
-        qstrings: {
-            id: '25461271@N07'
-        },
-        itemTemplate: '<li>' + '<a href="{{image_b}}" class="fancybox" data-fancybox-group="gall1" title="{{title}}"><img src="{{image_s}}" alt="{{title}}" /></a>' + '</li>'
-    });
 
 
     /* ==========================================================================
