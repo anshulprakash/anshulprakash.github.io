@@ -148,7 +148,7 @@ jQuery(document).ready(function () {
     Testimonials Slider
     ========================================================================== */
     jQuery('.owl-testimonials').owlCarousel({
-        autoPlay: true,
+        autoPlay: false,
         singleItem: true,
         pagination: true,
         stopOnHover: true,
