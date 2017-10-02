@@ -60,7 +60,7 @@ jQuery(document).ready(function () {
     Personal Title
     ========================================================================== */
     jQuery('#personal-typed').typed({
-        strings: ['Oh Hello!!', 'I am a Web Developer &  a Data Science Enthusiast.', 'Currently I am a Graduate Student at Texas A&M University.', 'As a Polyglot Programmer, I want to hack growth using data.','Scroll down to know more about me.'],
+        strings: ['Oh Hello!!', 'I am a Web Developer &  a Data Analytics Enthusiast.', 'Currently I am a Graduate Student at Texas A&M University.', 'As a Polyglot Programmer, I want to hack growth using data.','Scroll down to know more about me.'],
         loop: true,
         typeSpeed: 30,
         backDelay: 2000,
